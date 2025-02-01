@@ -1,0 +1,10 @@
+@page
+@using Microsoft.EntityFrameworkCore
+@model WebApp.Pages.Game.Menus.LoadConfig
+
+@{ ViewData["Title"] = "Config Select"; }
+@for(var x = 0; x < Model.ConfigItems.Count; x++)
+{
+        <a href="/Game/TicTacTwo?mode=conf&nr=@x">@Model.ConfigItems[x]</a>
+        <br/>
+}

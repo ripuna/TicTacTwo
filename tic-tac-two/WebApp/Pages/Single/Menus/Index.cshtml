@@ -1,0 +1,38 @@
+@page
+@model WebApp.Pages.Game.Menus.Index
+
+@{ ViewData["Title"] = "Main Menu"; }
+<table>
+    <tr>
+        <td>
+            <form method="post">
+                <input type="hidden" name="selection" value="new"/>
+                <input type="submit" value="New Game"/>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <form method="post">
+                <input type="hidden" name="selection" value="load"/>
+                <input type="submit" value="Load Game"/>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <form method="post">
+                <input type="hidden" name="selection" value="options"/>
+                <input type="submit" value="Options"/>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <form method="post">
+                <input type="hidden" name="selection" value="rules"/>
+                <input type="submit" value="TicTacTwo Rules"/>
+            </form>
+        </td>
+    </tr>
+</table>

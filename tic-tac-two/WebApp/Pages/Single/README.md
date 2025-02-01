@@ -1,0 +1,1 @@
+Dictionary "Single" is the tictactwo game as a single interface, currently it is not used!

@@ -1,0 +1,2 @@
+- In WebApp, Pages in Single are not in use (but can be used, if fixed)
+- Single is meant as Single instance (2 players play on the same screen)

@@ -1,0 +1,122 @@
+@page
+@using GameBrain
+@model WebApp.Pages.TicTacTwo.TicTacTwo
+
+@{ ViewData["Title"] = Model.GameIndex; }
+
+
+<table class="table page" style="border-collapse: collapse; max-width: 100px;">
+    <tr>
+        <td align="center">
+            <div>
+                @if (Model.Message != null)
+                {
+                    <p id="message">@Model.Message</p>
+                }
+                <br/>
+                <h1 class="page">You Are @Model.MyPiece</h1>
+                @{
+                    var nextMoveMessage = !Model.GameOver
+                        ? "At the moment, it's " + Model.GameBrain.NextMoveBy + "'s turn to move"
+                        : Model.Winner + " wins";
+                }
+                <h2>@nextMoveMessage</h2>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <table class="table gameboard" style="border-collapse: collapse; max-width: 100px;">
+            @for (var y = 0; y < Model.GameBrain.BoardDimY; y++)
+            {
+                <tr>
+                    @for (var x = 0; x < Model.GameBrain.BoardDimX; x++)
+                    {
+                        var isGridCell = x >= Model.GameBrain.GridX && x < Model.GameBrain.GridX + Model.GameBrain.GridDimX &&
+                                         y >= Model.GameBrain.GridY && y < Model.GameBrain.GridY + Model.GameBrain.GridDimY;
+                        var borderStyle = isGridCell ? "5px solid black" : "1px solid black";
+                        <td style="border: @borderStyle;">
+                            <form method="post">
+                                <input type="hidden" name="x" value="@x"/>
+                                <input type="hidden" name="y" value="@y"/>
+                                <input type="hidden" name="command" value="move">
+                                <input type="hidden" name="lastcommand" value="@Model.Command">
+                                <input type="hidden" name="piece"
+                                       value="@Model.GameVisualizer.DrawGamePiece(Model.GameBrain.GameBoard[x][y])"/>
+                                <button class="self-made-button" id="gamepiece" type="submit">
+                                    <img
+                                        src="~/img/@(Model.GameBrain.GameBoard[x][y] == EGamePiece.O ? "o.png" : Model.GameBrain.GameBoard[x][y] == EGamePiece.X ? "x.png" : "empty.png")"
+                                        alt="buttonpng" border="0"/>
+                                </button>
+                            </form>
+                        </td>
+                    }
+                </tr>
+            }
+        </table>
+
+        <td>
+            <table>
+                <tr>
+                    <td>
+                        <form method="post" class="game-form">
+                            <input type="hidden" name="command" value="movegrid">
+                            <button class="self-made-button" type="submit"><img
+                                    src="~/img/movegrid.png" alt="buttonpng" border="0"/></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form method="post">
+                            <input type="hidden" name="command" value="reset"/>
+                            <button class="self-made-button" type="submit"><img
+                                    src="~/img/reset.png" alt="buttonpng" border="0"/></button>
+                        </form>
+                    </td>
+                </tr>
+                @{
+                    if (Model.Ai)
+                    {
+                        <tr>
+                            <td>
+                                <form method="post">
+                                    <input type="hidden" name="command" value="ai"/>
+                                    <button class="self-made-button" type="submit"><img
+                                            src="~/img/aimove.png" alt="buttonpng" border="0"/></button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                }
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <div>
+                <p class="lead">Info for joining Game</p>
+                <strong>Game name </strong>= @Model.GameIndex<br/>
+                <strong>Link for the other player:</strong>
+                <div class="link-container">
+                    <a class="hidden-link"
+                       href="http://localhost:8080/TicTacTwo/TicTacTwo?pass=@(Model.MyPiece == EGamePiece.O ? Model.GameBrain.XPass : Model.GameBrain.OPass)&index=@Model.GameIndex">
+                        http://localhost:8080/TicTacTwo/TicTacTwo?pass=@(Model.MyPiece == EGamePiece.O ? Model.GameBrain.XPass : Model.GameBrain.OPass)&index=@Model.GameIndex
+                    </a>
+                </div>
+                </div>
+        </td>
+    </tr>
+</table>
+
+<script>
+    var myPiece = @Html.Raw(Json.Serialize(Model.MyPiece));
+    var nextMoveBy = @Html.Raw(Json.Serialize(Model.GameBrain.NextMoveBy));
+    var gameOver = @Html.Raw(Json.Serialize(Model.GameOver));
+
+    if (myPiece !== nextMoveBy && !gameOver) {
+        setTimeout(function () {
+            window.location.href = window.location.href;
+        }, 2000);
+    }
+</script>

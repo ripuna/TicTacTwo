@@ -1,0 +1,24 @@
+@page
+@model JoinGame
+
+@{ ViewData["Title"] = "Join Game"; }
+
+<div class="join-container">
+    <h3 class="join-title">Join Game</h3>
+
+    <form method="post" class="form-horizontal">
+        <div class="form-group">
+            <label for="name" class="form-label">Name:</label>
+            <input asp-for="Name" class="form-control" id="name"/>
+        </div>
+        <div class="form-group">
+            <label for="password" class="form-label">Password:</label>
+            <input asp-for="Password" type="password" class="form-control" id="password"/>
+        </div>
+        <input type="submit" value="Join Game" class="btn btn-primary btn-join"/>
+    </form>
+
+    <div class="form-note">
+        @Model.Message
+    </div>
+</div>

@@ -1,0 +1,105 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = WebApp
+build_property.RootNamespace = WebApp
+build_property.ProjectDir = C:\Proge\dev\Projects\TicTacTwo\tic-tac-two\WebApp\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Proge\dev\Projects\TicTacTwo\tic-tac-two\WebApp
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Proge/dev/Projects/TicTacTwo/tic-tac-two/WebApp/Pages/AddConfig.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkQ29uZmlnLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proge/dev/Projects/TicTacTwo/tic-tac-two/WebApp/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proge/dev/Projects/TicTacTwo/tic-tac-two/WebApp/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proge/dev/Projects/TicTacTwo/tic-tac-two/WebApp/Pages/Join/JoinGame.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSm9pblxKb2luR2FtZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proge/dev/Projects/TicTacTwo/tic-tac-two/WebApp/Pages/MenuController.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVudUNvbnRyb2xsZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proge/dev/Projects/TicTacTwo/tic-tac-two/WebApp/Pages/New/pvp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmV3XHB2cC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proge/dev/Projects/TicTacTwo/tic-tac-two/WebApp/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proge/dev/Projects/TicTacTwo/tic-tac-two/WebApp/Pages/Rules.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUnVsZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proge/dev/Projects/TicTacTwo/tic-tac-two/WebApp/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proge/dev/Projects/TicTacTwo/tic-tac-two/WebApp/Pages/Single/Menus/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2luZ2xlXE1lbnVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proge/dev/Projects/TicTacTwo/tic-tac-two/WebApp/Pages/Single/Menus/LoadConfig.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2luZ2xlXE1lbnVzXExvYWRDb25maWcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proge/dev/Projects/TicTacTwo/tic-tac-two/WebApp/Pages/Single/Menus/LoadGame.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2luZ2xlXE1lbnVzXExvYWRHYW1lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proge/dev/Projects/TicTacTwo/tic-tac-two/WebApp/Pages/Single/Menus/Options.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2luZ2xlXE1lbnVzXE9wdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proge/dev/Projects/TicTacTwo/tic-tac-two/WebApp/Pages/Single/Rules.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2luZ2xlXFJ1bGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proge/dev/Projects/TicTacTwo/tic-tac-two/WebApp/Pages/Single/TicTacTwo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2luZ2xlXFRpY1RhY1R3by5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proge/dev/Projects/TicTacTwo/tic-tac-two/WebApp/Pages/TicTacTwo/TicTacTwo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGljVGFjVHdvXFRpY1RhY1R3by5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proge/dev/Projects/TicTacTwo/tic-tac-two/WebApp/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proge/dev/Projects/TicTacTwo/tic-tac-two/WebApp/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Proge/dev/Projects/TicTacTwo/tic-tac-two/WebApp/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-1lnhnt7yf2

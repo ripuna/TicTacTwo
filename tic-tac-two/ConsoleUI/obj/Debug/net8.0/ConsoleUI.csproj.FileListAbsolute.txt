@@ -1,0 +1,17 @@
+C:\Proge\dev\C#\icd0008-24f\tic-tac-two\ConsoleUI\bin\Debug\net8.0\ConsoleUI.deps.json
+C:\Proge\dev\C#\icd0008-24f\tic-tac-two\ConsoleUI\bin\Debug\net8.0\ConsoleUI.dll
+C:\Proge\dev\C#\icd0008-24f\tic-tac-two\ConsoleUI\bin\Debug\net8.0\ConsoleUI.pdb
+C:\Proge\dev\C#\icd0008-24f\tic-tac-two\ConsoleUI\bin\Debug\net8.0\Abstracts.dll
+C:\Proge\dev\C#\icd0008-24f\tic-tac-two\ConsoleUI\bin\Debug\net8.0\GameBrain.dll
+C:\Proge\dev\C#\icd0008-24f\tic-tac-two\ConsoleUI\bin\Debug\net8.0\GameBrain.pdb
+C:\Proge\dev\C#\icd0008-24f\tic-tac-two\ConsoleUI\bin\Debug\net8.0\Abstracts.pdb
+C:\Proge\dev\C#\icd0008-24f\tic-tac-two\ConsoleUI\obj\Debug\net8.0\ConsoleUI.csproj.AssemblyReference.cache
+C:\Proge\dev\C#\icd0008-24f\tic-tac-two\ConsoleUI\obj\Debug\net8.0\ConsoleUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proge\dev\C#\icd0008-24f\tic-tac-two\ConsoleUI\obj\Debug\net8.0\ConsoleUI.AssemblyInfoInputs.cache
+C:\Proge\dev\C#\icd0008-24f\tic-tac-two\ConsoleUI\obj\Debug\net8.0\ConsoleUI.AssemblyInfo.cs
+C:\Proge\dev\C#\icd0008-24f\tic-tac-two\ConsoleUI\obj\Debug\net8.0\ConsoleUI.csproj.CoreCompileInputs.cache
+C:\Proge\dev\C#\icd0008-24f\tic-tac-two\ConsoleUI\obj\Debug\net8.0\ConsoleUI.csproj.Up2Date
+C:\Proge\dev\C#\icd0008-24f\tic-tac-two\ConsoleUI\obj\Debug\net8.0\ConsoleUI.dll
+C:\Proge\dev\C#\icd0008-24f\tic-tac-two\ConsoleUI\obj\Debug\net8.0\refint\ConsoleUI.dll
+C:\Proge\dev\C#\icd0008-24f\tic-tac-two\ConsoleUI\obj\Debug\net8.0\ConsoleUI.pdb
+C:\Proge\dev\C#\icd0008-24f\tic-tac-two\ConsoleUI\obj\Debug\net8.0\ref\ConsoleUI.dll

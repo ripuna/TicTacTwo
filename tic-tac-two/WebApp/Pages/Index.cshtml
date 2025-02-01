@@ -1,0 +1,24 @@
+﻿@page
+@model IndexModel
+
+@{ ViewData["Title"] = "Main Menu"; }
+
+<div class="menu-container">
+    <h1 class="menu-title"><img src="img/x.png" class="game-icon-index" alt="game icon"/> TIC-TAC-TWO <img src="img/o.png" class="game-icon-index" alt="game icon"/></h1>
+    <form asp-page="./MenuController" method="post" class="form-horizontal">
+        <input type="hidden" name="Cmd" value="new"/>
+        <input type="submit" value="Create A New Game" class="btn btn-primary menu-button"/>
+    </form>
+    <form asp-page="./MenuController" method="post" class="form-horizontal">
+        <input type="hidden" name="Cmd" value="join"/>
+        <input type="submit" value="Join A Game" class="btn btn-primary menu-button"/>
+    </form>
+    <form asp-page="./MenuController" method="post" class="form-horizontal">
+        <input type="hidden" name="Cmd" value="config"/>
+        <input type="submit" value="Create A New Configuration" class="btn btn-primary menu-button"/>
+    </form>
+    <form asp-page="./MenuController" method="post" class="form-horizontal">
+        <input type="hidden" name="Cmd" value="rules"/>
+        <input type="submit" value="Game Rules" class="btn btn-info menu-button"/>
+    </form>
+</div>

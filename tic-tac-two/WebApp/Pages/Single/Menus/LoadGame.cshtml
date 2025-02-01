@@ -1,0 +1,9 @@
+@page
+@model WebApp.Pages.Game.Menus.LoadGame
+
+@{ ViewData["Title"] = "Save Select"; }
+@for(var x = 0; x < Model.GameItems.Count; x++)
+{
+    <a href="/Game/TicTacTwo?mode=load&nr=@x">@Model.GameItems[x]</a>
+    <br/>
+}

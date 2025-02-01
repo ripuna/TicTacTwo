@@ -1,0 +1,43 @@
+@page
+@model WebApp.Pages.New.pvp
+
+@{ ViewData["Title"] = "New PvP Game"; }
+
+<h3>@Model.Message</h3>
+
+<div class="game-container">
+    <h3 class="game-title">@Model.Message</h3>
+
+    <form asp-page="./Game/TicTacTwo" method="post" class="form-horizontal">
+        <div class="form-group">
+            <label for="configSelect" class="form-label">Select Configuration:</label>
+            <select id="configSelect" name="config" class="form-control">
+                @for (var x = 0; x < Model.ConfigItems.Count; x++)
+                {
+                    <option value="@x">@Model.ConfigItems[x]</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="name" class="form-label">Game Name:</label>
+            <input type="text" id="name" name="gameName" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label for="xPass" class="form-label">Password for X:</label>
+            <input type="text" id="xPass" name="xPass" value="@Model.CreatePassword()" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label for="oPass" class="form-label">Password for O:</label>
+            <input type="text" id="oPass" name="oPass" value="@Model.CreatePassword()" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label for="Ai" class="form-label">Enable AI:</label>
+            <input asp-for="Ai"/>
+        </div>
+        <div class="form-note">
+            NB! Remember at least one of the passwords and the name (maybe write them down).<br/>
+            Passwords and name are used to join games and select your piece.
+        </div>
+        <input type="submit" value="Start" class="btn btn-primary btn-start"/>
+    </form>
+</div>

@@ -1,0 +1,115 @@
+@page
+@model WebApp.Pages.Game.TicTacTwo
+
+@{ ViewData["Title"] = Model.GameBrain.GetGameConfigName(); }
+<h1>@Model.GameBrain.GetGameConfigName()</h1>
+<h3>@Model.GameVisualizer.DrawGamePiece(@Model.GameBrain.NextMoveBy)-s turn to make a move</h3>
+<h2>@Model.Message</h2>
+
+
+<table class="table" style="border-collapse: collapse; max-width: 100px;">
+    <tr>
+        <td>
+            <table class="table" style="border-collapse: collapse; max-width: 100px;">
+                @for (var x = 0; x < Model.GameBrain.BoardDimX; x++)
+                {
+                    <tr>
+                        @for (var y = 0; y < Model.GameBrain.BoardDimY; y++)
+                        {
+                            var isGridCell = x >= Model.GameBrain.GridX && x < Model.GameBrain.GridX + Model.GameBrain.GridDimX &&
+                                                 y >= Model.GameBrain.GridY && y < Model.GameBrain.GridY + Model.GameBrain.GridDimY;
+                            var borderStyle = isGridCell ? "5px solid black" : "1px solid black";
+                            <td style="border: @borderStyle;">
+
+                                @{
+                                    var y1 = y;
+                                }
+
+                                @{
+                                    var x1 = x;
+                                }
+                                <form method="post" class="game-form">
+                                    <input type="hidden" name="x" value="@x1"/>
+                                    <input type="hidden" name="y" value="@y1"/>
+                                    <input type="hidden" name="command" value="move">
+                                    <input type="hidden" name="piece"
+                                           value="@Model.GameVisualizer.DrawGamePiece(Model.GameBrain.GameBoard[x1][y1])"/>
+                                    <button
+                                        type="submit">@Model.GameVisualizer.DrawGamePiece(Model.GameBrain.GameBoard[x1][y1])</button>
+                                </form>
+                            </td>
+                        }
+                    </tr>
+                }
+            </table>
+        </td>
+        <td>
+            <table>
+                <tr>
+                    <td>
+                        <form method="post" class="game-form">
+                            <input type="hidden" name="command" value="movegrid">
+                            <button type="submit">Move Grid</button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form method="post" class="game-form">
+                            <input type="hidden" name="command" value="save">
+                            <button type="submit">Save TicTacTwo</button>
+                        </form>
+                    </td>
+                    <td>
+                        @if (Model.Command == "save")
+                        {
+                            <form method="post" class="game-form">
+                                <input type="hidden" name="command" value="aftersave">
+                                <input asp-for="GameName">
+                                <button type="submit">Save</button>
+                            </form>
+                        }
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form method="post" class="game-form">
+                            <input type="hidden" name="command" value="reset">
+                            <button type="submit">Reset TicTacTwo</button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form>
+                            <a href="..">Exit</a>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<!-- Hidden inputs for gamestate and gameover -->
+<input type="hidden" id="gamestate" value="@Model.GameBrain.GetGameStateJson()">
+<input type="hidden" id="gameover" value="@Model.GameOver.ToString().ToLower()">
+<input type="hidden" id="lastcommand" value="@Model.Command">
+
+<script>
+    document.querySelectorAll('.game-form').forEach(form => {
+        form.addEventListener('submit', function() {
+            form.appendChild(createHiddenInput('gamestate', document.getElementById('gamestate').value));
+            form.appendChild(createHiddenInput('gameover', document.getElementById('gameover').value));
+            form.appendChild(createHiddenInput('lastcommand', document.getElementById('lastcommand').value));
+        });
+    });
+
+    function createHiddenInput(name, value) {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = name;
+        input.value = value;
+        return input;
+    }
+</script>
